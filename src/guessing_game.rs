@@ -4,7 +4,7 @@ use std::io;
 
 fn guessing_game() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
-    loop {
+   loop {
         println!("Enter a Number: ");
         let mut number = String::new();
         let _ = io::stdin()
@@ -21,7 +21,9 @@ fn guessing_game() {
     }
 }
 
+
 fn guess_checker(guess: u32, secret: u32) -> bool {
+
     match guess.cmp(&secret) {
         Ordering::Less => {
             println!("Your guess is too small");
